@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix --max-warnings=0",
+      "eslint --config eslint.config.js --fix --max-warnings=0",
       "prettier --write"
     ],
     "**/*.{json,md,yaml,yml,css}": [

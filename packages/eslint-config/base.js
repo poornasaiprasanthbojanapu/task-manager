@@ -26,8 +26,14 @@ const baseConfig = tseslint.config(
   // Must be LAST so it overrides any formatting rules above
   prettierConfig,
 
-  // ── Layer 4: Our custom rules ───────────────────────────────
+  // ── Layer 4A: TypeScript-specific typed rules ───────────────
   {
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
     rules: {
       // ── TypeScript specific ──────────────────────────────────
 
@@ -68,7 +74,12 @@ const baseConfig = tseslint.config(
 
       // Prefer x?.y over x && x.y
       '@typescript-eslint/prefer-optional-chain': 'error',
+    },
+  },
 
+  // ── Layer 4B: General JavaScript/TypeScript rules ───────────
+  {
+    rules: {
       // ── General JavaScript ────────────────────────────────────
 
       // console.log is a debug artifact — use a real logger
