@@ -1,0 +1,44 @@
+# ─── Dependencies ─────────────────────────────
+node_modules
+
+# ─── Build outputs ────────────────────────────
+dist
+build
+.next
+out
+
+# ─── Turbo ────────────────────────────────────
+# Turbo writes its local task cache here.
+# You NEVER commit this — it's machine-specific.
+# Remote cache (Vercel/self-hosted) is separate.
+.turbo
+
+# ─── Test coverage ────────────────────────────
+coverage
+
+# ─── Environment files ────────────────────────
+# .env contains secrets. NEVER commit it.
+# .env.example is fine to commit — it's a template
+# with no real values, just key names.
+.env
+.env.local
+.env.*.local
+
+# ─── Editor ───────────────────────────────────
+.vscode
+.idea
+*.suo
+*.sw?
+
+# ─── OS ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── TypeScript ───────────────────────────────
+# Build info files Typescript creates for incremental builds.
+# Machine-specific, should not be committed.
+*.tsbuildinfo
+
+# ─── Logs ─────────────────────────────────────
+*.log
+pnpm-debug.log*

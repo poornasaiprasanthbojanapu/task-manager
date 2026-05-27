@@ -1,0 +1,18 @@
+# Build outputs — never format compiled JS
+dist
+build
+.next
+out
+
+# pnpm lockfile — auto-generated, Prettier mangles it
+pnpm-lock.yaml
+package-lock.json
+
+# Turbo cache — machine-generated files
+.turbo
+
+# Coverage reports — auto-generated HTML/JSON
+coverage
+
+# Dependencies
+node_modules
